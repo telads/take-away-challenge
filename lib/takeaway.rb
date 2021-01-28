@@ -1,11 +1,22 @@
 class Menu
 
-  def see
-    { "french fries" => "£4", "burger" => "£8", "pasta" => "£8", "water" => "£1" }
+  def initialize
+    @menu = {"french fries" => "£4",
+              "burger" => "£8",
+              "pasta" => "£8",
+              "water" => "£1" }
   end
 
-  def select
-    "2 x french fries, 1 x pasta"
+  def see
+    @menu
+  end
+
+  def select(items)
+    french_fries = items.count("french fries")
+    pasta = items.count("pasta")
+    "#{french_fries} x french fries, #{pasta} x pasta"
+
+
   end
 
 end
